@@ -81,6 +81,12 @@ html,body{
 	opacity: 1;
 	-webkit-animation: unactive 0.3s;
 }
+.saying {
+    width: 340px;
+	height: 200px;
+	margin: 0 auto;
+	
+} 
 @-webkit-keyframes unactive {
 	0% {
 		margin-top: -73px;
@@ -99,6 +105,10 @@ html,body{
 
 <div class="page_mengceng"></div>
 <div class="card_border"></div>
+<div class="saying">
+<p style="font-family:arial;color:red;font-size:20px;text-align:center">Memories are the key not to the past,<br>but to the future.</p>
+<p style="font-family:arial;color:red;font-size:20px;text-align:right">by Corrie ten Boom</p>
+</div>
 
 </body>
 
@@ -113,6 +123,7 @@ var time=ary.length;
 var DomAry=[]
 var dobleAry_index=[];
 var dobleAry_Num=[];
+var count=0;
 
 (function(){
     for(var j=0;j<time;j++){
@@ -141,6 +152,9 @@ for(var i=0;i<el.length;i++){
 	       if(dobleAry_Num[0]==dobleAry_Num[1]){
 		         dobleAry_Num.length=0
 			     dobleAry_index.length=0
+				 count++;
+				 if(count==8){var url="http://zhidao.baidu.com/";
+                    window.open(url);}
 	       }else{
 	       	  $(".page_mengceng").show();
 	          setTimeout(function(){
@@ -153,6 +167,7 @@ for(var i=0;i<el.length;i++){
 	       }
 	    }
 	};
+ 
 }
 
 </script>
